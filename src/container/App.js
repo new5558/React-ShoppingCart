@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   onDeleteItem = (id) => {
-    console.log(id);
     this.setState((previousState) => ({
       list : previousState.list.filter(item => {
         return item.id !== id;
