@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function({onPress, textField, onChange}) {
+export default function({onTypeBoxPress, textField, onTypeBoxChange}) {
     return(
         <div>
-            <input value={textField} type="text" onKeyPress={onPress} onChange={onChange}/>
+            <input value={textField} type="text" onKeyPress={onTypeBoxPress} onChange={onTypeBoxChange}/>
         </div>
     );
 

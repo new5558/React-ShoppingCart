@@ -1,10 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
-export default function({arrayOfNamesObj = [], onDelete}) {
-    // console.log(arrayOfNamesObj, 'ok');
+export default function({arrayOfNamesObj = [], onDeleteItem}) {
     const arayOfCards = arrayOfNamesObj.map(({name, id}) => {
-        return (<Card onDelete={onDelete} name = {name} key={id} id={id}/>)
+        return (<Card onDeleteItem={onDeleteItem} name = {name} key={id} id={id}/>)
     })
     return(
         <div>

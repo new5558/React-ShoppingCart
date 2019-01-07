@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
 
-  onDelete = (id) => {
+  onDeleteItem = (id) => {
     console.log(id);
     this.setState((previousState) => ({
       list : previousState.list.filter(item => {
@@ -21,7 +21,7 @@ class App extends Component {
     }))
   }
 
-  onAdd = (event) => {
+  onAddItem = (event) => {
     const name = event.target.value;
     if(name === "") {
         return;
@@ -34,26 +34,26 @@ class App extends Component {
     }))
   }
 
-  onPress = (event) => {
+  onTypeBoxPress = (event) => {
     if(event.key === 'Enter' ) {
-      this.onAdd(event);
+      this.onAddItem(event);
       this.setState({
         textField: '',
       })
-    } 
+    }
   }
 
-  onChange = (event) => {
+  onTypeBoxChange = (event) => {
     this.setState({
       textField: event.target.value,
-    })
+    });
   }
 
   render() {
     return (
       <div>
-        <TypeBox textField={this.state.textField} onPress={this.onPress} onChange={this.onChange}/>
-        <CardList arrayOfNamesObj={this.state.list} onDelete={this.onDelete}/>
+        <TypeBox textField={this.state.textField} onTypeBoxPress={this.onTypeBoxPress} onTypeBoxChange={this.onTypeBoxChange}/>
+        <CardList arrayOfNamesObj={this.state.list} onDeleteItem={this.onDeleteItem}/>
       </div>
     );
   }
