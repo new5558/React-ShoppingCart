@@ -4,6 +4,7 @@ import './index.css';
 import App from './container/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
+import main from './redux/main';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
