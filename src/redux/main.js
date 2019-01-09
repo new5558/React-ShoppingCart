@@ -15,6 +15,6 @@ const rootReducer = (state = initialState, action) => {
     }
 }
 
-const store = createStore(rootReducer);
-window.store = store;
+export default createStore(rootReducer);
+// window.store = store;
 window.addArticle = addArticle;
